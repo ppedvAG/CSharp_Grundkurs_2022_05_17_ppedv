@@ -123,7 +123,7 @@ switch (tag) //switch mit boolscher Logik
 
 enum Wochentag
 {
-	Mo, 
+	Mo = 1, 
 	Di, 
 	Mi, 
 	Do, 
