@@ -1,70 +1,70 @@
 ﻿#region Variablen
-////Variable: Typ Name;
+//Variable: Typ Name;
 int zahl; //Definition
 zahl = 5; //Zuweisung
 Console.WriteLine(zahl); //cw + Tab + Tab: Console.WriteLine();
 
-//int zahlMitZuweisung = 5; //Definition mit Zuweisung
-//Console.WriteLine(zahlMitZuweisung);
+int zahlMitZuweisung = 5; //Definition mit Zuweisung
+Console.WriteLine(zahlMitZuweisung);
 
-//string stadt = "Wien"; //Text mit Doppeltem Hochkomma
-//Console.WriteLine(stadt);
+string stadt = "Wien"; //Text mit Doppeltem Hochkomma
+Console.WriteLine(stadt);
 
-///*
-// * Mehrzeiliger
-// * Kommentar
-// */
+/*
+ * Mehrzeiliger
+ * Kommentar
+ */
 
-//char zeichen = 'S'; //Einzelnes Zeichen mit einzelnen Hochkomma
-//Console.WriteLine(zeichen);
+char zeichen = 'S'; //Einzelnes Zeichen mit einzelnen Hochkomma
+Console.WriteLine(zeichen);
 
-//double kommazahl = 33.88; //Kommazahl mit Punkt
-//Console.WriteLine(kommazahl);
+double kommazahl = 33.88; //Kommazahl mit Punkt
+Console.WriteLine(kommazahl);
 
-//float kommaFloat = 55.44f; //Float mit f
-//Console.WriteLine(kommaFloat);
+float kommaFloat = 55.44f; //Float mit f
+Console.WriteLine(kommaFloat);
 
-//decimal geld = 333_598_72_49_85.44m; //Decimal mit m, Trennzeichen mit _
-//Console.WriteLine(geld);
+decimal geld = 333_598_72_49_85.44m; //Decimal mit m, Trennzeichen mit _
+Console.WriteLine(geld);
 
-//bool wahrFalsch = true; //true oder false
-//Console.WriteLine(wahrFalsch);
+bool wahrFalsch = true; //true oder false
+Console.WriteLine(wahrFalsch);
 
-//string ausgabe = "Ich wohne in " + stadt + " und bin " + zahl + " Jahre alt"; //Strings mit + verbinden
-//Console.WriteLine(ausgabe);
+string ausgabe = "Ich wohne in " + stadt + " und bin " + zahl + " Jahre alt"; //Strings mit + verbinden
+Console.WriteLine(ausgabe);
 
-//string stadtAusgabe = $"Ich wohne in {stadt} und bin {zahl} Jahre alt"; //String Interpolation mit $ vor dem String
-//Console.WriteLine(stadtAusgabe);
+string stadtAusgabe = $"Ich wohne in {stadt} und bin {zahl} Jahre alt"; //String Interpolation mit $ vor dem String
+Console.WriteLine(stadtAusgabe);
 
-//Console.WriteLine("Ich wohne in {0} und bin {1} Jahre alt", stadt, zahl); //Mehrere Argumente bei cw
+Console.WriteLine("Ich wohne in {0} und bin {1} Jahre alt", stadt, zahl); //Mehrere Argumente bei cw
 
-////https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions
+//https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-escapes-in-regular-expressions
 
-//string umbruch = "Hallo ich bin \n ein string"; //\n: Zeilenumbruch
-//Console.WriteLine(umbruch);
+string umbruch = "Hallo ich bin \n ein string"; //\n: Zeilenumbruch
+Console.WriteLine(umbruch);
 
-//string tab = "Hallo ich bin \t ein string"; //\t: Tabulator
-//Console.WriteLine(tab);
+string tab = "Hallo ich bin \t ein string"; //\t: Tabulator
+Console.WriteLine(tab);
 
-//string verbatim = @"Hallo	 ich bin
-//ein string";
-//Console.WriteLine(verbatim); //Verbatim-String: wird genau so interpretiert wie im Code geschrieben
+string verbatim = @"Hallo	 ich bin
+ein string";
+Console.WriteLine(verbatim); //Verbatim-String: wird genau so interpretiert wie im Code geschrieben
 
-//string pfad = @"C:\Users\User"; //statt C:\\Users\\User
+string pfad = @"C:\Users\User"; //statt C:\\Users\\User
 #endregion
 
 #region Eingabe
-//string eingabe = Console.ReadLine(); //Eingabe mit Console.ReadLine(), wartet bis Enter
-//Console.WriteLine(eingabe);
+string eingabe = Console.ReadLine(); //Eingabe mit Console.ReadLine(), wartet bis Enter
+Console.WriteLine(eingabe);
 
-//char eingabeReadKey = Console.ReadKey().KeyChar; //Zeicheneingabe (ohne Enter)
-//Console.WriteLine(eingabeReadKey);
+char eingabeReadKey = Console.ReadKey().KeyChar; //Zeicheneingabe (ohne Enter)
+Console.WriteLine(eingabeReadKey);
 
-//int umwandlung = int.Parse(eingabe); //Umwandlung von String zu Zahl
-//Console.WriteLine(umwandlung);
+int umwandlung = int.Parse(eingabe); //Umwandlung von String zu Zahl
+Console.WriteLine(umwandlung);
 
-//int convert = Convert.ToInt32(eingabe); //Umwandlung von String zu Zahl (alte Methode)
-//Console.WriteLine(convert);
+int convert = Convert.ToInt32(eingabe); //Umwandlung von String zu Zahl (alte Methode)
+Console.WriteLine(convert);
 #endregion
 
 //Console.WriteLine("Test"); Strg + K, C: Alle markierten Zeilen auskommentieren
