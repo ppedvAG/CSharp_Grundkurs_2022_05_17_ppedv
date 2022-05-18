@@ -84,7 +84,6 @@ namespace Taschenrechner2
         }
         #endregion
 
-
         #region Alternative 2:
         static void Main2(string[] args)
         {
