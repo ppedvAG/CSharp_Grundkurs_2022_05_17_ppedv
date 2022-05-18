@@ -23,7 +23,7 @@ public class Program
 		Person p2 = p1;
 		p1.Name = "Max";
 
-		//Wertetyp
+		//Referenztyp, verhält sich wie ein Wertetyp
 		string s1 = "Test";
 		string s2 = s1;
 		s1 = "Neuer Test";
