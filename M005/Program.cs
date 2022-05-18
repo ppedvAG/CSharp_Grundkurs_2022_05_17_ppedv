@@ -30,6 +30,8 @@
 		{
 			Console.WriteLine("Keine Zahl");
 		}
+
+		PrintZahl(4);
 	}
 
 	static int Addiere(int zahl1, int zahl2) //Struktur: Rückgabedatentyp (int) Name (Parameter1, Parameter2, ...)
@@ -67,4 +69,49 @@
 	{
 		return (z1 + z2, z1 - z2);
 	}
+
+	static void PrintZahl(int zahl) //void: kein Rückgabewert
+	{
+		Console.WriteLine(zahl);
+		return; //beendet die Funktion
+		Console.WriteLine(zahl); //kann nicht erreicht werden
+	}
+
+	static string PrintEnum(Wochentag tag) //Enumwert als Parameter
+	{
+		switch (tag)
+		{
+			case Wochentag.Mo: return "Montag";
+			case Wochentag.Di: return "Dienstag";
+			case Wochentag.Mi: return "Mittwoch";
+			case Wochentag.Do: return "Donnerstag";
+			case Wochentag.Fr: return "Freitag";
+			case Wochentag.Sa: return "Samstag";
+			case Wochentag.So: return "Sonntag";
+			default: return "Kein Wochentag";
+		}
+
+		//return tag switch
+		//{
+		//	Wochentag.Mo => "Montag",
+		//	Wochentag.Di => "Dienstag",
+		//	Wochentag.Mi => "Mittwoch",
+		//	Wochentag.Do => "Donnerstag",
+		//	Wochentag.Fr => "Freitag",
+		//	Wochentag.Sa => "Samstag",
+		//	Wochentag.So => "Sonntag",
+		//	_ => "Kein Wochentag",
+		//};
+	}
+}
+
+enum Wochentag
+{
+	Mo,
+	Di,
+	Mi,
+	Do,
+	Fr,
+	Sa,
+	So
 }

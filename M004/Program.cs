@@ -48,9 +48,7 @@ for (int i = 0; i < zahlen.Length; i++) //Array mit for-Schleife durchgehen
 }
 
 foreach (int z in zahlen) //Array mit foreach durchgehen, kann nicht daneben greifen
-{
 	Console.WriteLine(z);
-}
 #endregion
 
 #region Enums
@@ -64,6 +62,7 @@ if (wt == Wochentag.Di) //Überprüfung mit Enum
 int x = 2;
 Wochentag castTag = (Wochentag) x; //Mittwoch
 
+//Enum.GetValues<Wochentag>().Length;
 for (int i = 0; i < 7; i++)
 {
 	Console.WriteLine((Wochentag) i); //Alle Wochentage printen
@@ -88,8 +87,10 @@ else if (tag == Wochentag.Di || tag == Wochentag.Mi || tag == Wochentag.Do)
 	Console.WriteLine("Wochenmitte");
 else if (tag == Wochentag.Fr || tag == Wochentag.Sa || tag == Wochentag.So)
 	Console.WriteLine("Wochenende");
+else
+	Console.WriteLine("Etwas ist schiefgelaufen");
 
-switch (tag)
+switch (tag) //Selbiges wie oben, nur mit switch
 {
 	case Wochentag.Mo:
 		Console.WriteLine("Wochenanfang");
