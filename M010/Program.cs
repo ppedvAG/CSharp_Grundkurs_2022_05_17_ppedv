@@ -49,13 +49,7 @@ public class Mensch : Lebewesen, IArbeit, ITeilzeitArbeit //Alle Member aus beid
 
 	public string Job { get; set; } = "Softwareentwickler";
 
-	void IArbeit.Lohnauszahlung()
-	{
-		Console.WriteLine($"Dieser Mensch hat ein Gehalt von {Gehalt} für den Job {Job} bekommen");
-	}
+	void IArbeit.Lohnauszahlung() => Console.WriteLine($"Dieser Mensch hat ein Gehalt von {Gehalt} für den Job {Job} bekommen");
 
-	void ITeilzeitArbeit.Lohnauszahlung()
-	{
-		Console.WriteLine($"Dieser Mensch hat ein Gehalt von {Gehalt / 2} für den Job {Job} bekommen");
-	}
+	void ITeilzeitArbeit.Lohnauszahlung() => Console.WriteLine($"Dieser Mensch hat ein Gehalt von {Gehalt / 2} für den Job {Job} bekommen");
 }
