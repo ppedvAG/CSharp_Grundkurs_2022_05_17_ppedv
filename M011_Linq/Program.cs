@@ -110,7 +110,7 @@ public class Program
 		//Fahrzeuge aus Liste heraus holen
 		List<Fahrzeug> bmwsAusGroup = bmwGroup.ToList();
 
-		//Group zu Dictionary konvertieren
+		//Group zu Dictionary konvertieren (var schreiben -> Strg + . -> Langer Typ generieren)
 		Dictionary<FahrzeugMarke, List<Fahrzeug>> groupDictionary = groupedFahrzeuge.ToDictionary(group => group.Key, fzg => fzg.ToList());
 
 		//Liste schnell ausgeben
