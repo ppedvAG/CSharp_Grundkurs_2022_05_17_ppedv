@@ -4,7 +4,12 @@ namespace M006 //Definition von M006 Namespace
 {
 	public class Program //M006.Program
 	{
-		static void Main(string[] args) //svm + Tab + Tab -> Main-Methode
+		/// <summary>
+		/// Der Einstiegspunkt
+		/// </summary>
+		/// <param name="args"></param>
+		/// <returns>Den Wert 0</returns>
+		static int Main(string[] args) //svm + Tab + Tab -> Main-Methode
 		{
 			AndererNamespaceProgram p; //kann nicht gefunden werden
 			M006_AndererNamespace.Program prog; //Ohne Namespace: Program hier, mit Namespace.Program: Program unten
@@ -17,6 +22,7 @@ namespace M006 //Definition von M006 Namespace
 
 			//m.Gehalt = 1234; //Nicht möglich, da privater Setter
 			Console.WriteLine(m.Gehalt);
+			return 0;
 		}
 	}
 

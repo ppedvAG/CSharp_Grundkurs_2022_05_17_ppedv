@@ -1,5 +1,8 @@
 ﻿namespace M006; //Namespace für die ganze Datei definieren
 
+/// <summary>
+/// Eine Klasse die eine Person repräsentiert
+/// </summary>
 class Person
 {
 	#region Variable
@@ -36,6 +39,9 @@ class Person
 
 	private int gehalt;
 
+	/// <summary>
+	/// Das Gehalt der Person
+	/// </summary>
 	public int Gehalt
 	{
 		get => gehalt;
@@ -53,6 +59,11 @@ class Person
 
 	//public Member() { } Leeren Standardkonstruktor überschreiben mit eigenem Konstruktor
 
+	/// <summary>
+	/// Ein Konstruktor
+	/// </summary>
+	/// <param name="name">Der Nachname der Person</param>
+	/// <param name="vorname">Der Vorname der Person</param>
 	public Person(string name, string vorname) //Konstruktor: wird aufgerufen bei new Member(), wird verwendet um Standardwerte zu initiieren
 	{
 		this.name = name; //this: Variable in der Klasse selbst ansprechen
