@@ -1,5 +1,4 @@
-﻿using static M009.Abstract;
-using static M009.Vererbung;
+﻿using static M009.Vererbung;
 
 public class Program
 {
