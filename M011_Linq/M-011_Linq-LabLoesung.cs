@@ -1,6 +1,6 @@
-﻿namespace M011_Linq_LabCode;
+﻿namespace M011_Linq;
 
-public class LabCode
+public class M_011_Linq_LabLoesung
 {
 	//1. Gib alle Autos mit 6 Sitzplätzen aus.
 	//2. Gib die Summe aller Sitzplätze aus.
@@ -11,8 +11,7 @@ public class LabCode
 	//7. Gib pro Automarke das schnellste Auto aus.
 	//8. Gib die Höchstgeschwindigkeit pro Anzahl Sitzplätze aus und sortiere nach Sitzanzahl (schnellster 4-, 5- und 6-Sitzer).
 	//9. Mische die Liste. Erstelle danach eine Erweiterungsmethode dafür.
-
-	static void Main2(string[] args)
+	static void Main(string[] args)
 	{
 		List<Fahrzeug> fahrzeuge = new List<Fahrzeug>
 		{
@@ -29,9 +28,36 @@ public class LabCode
 			new Fahrzeug(217, FahrzeugMarke.Audi),
 			new Fahrzeug(125, FahrzeugMarke.Audi)
 		};
+
+		//1
+		fahrzeuge.Where(e => e.Sitze.Count == 6);
+
+		//2
+		fahrzeuge.Sum(e => e.Sitze.Count);
+
+		//3
+		fahrzeuge.OrderBy(e => e.Marke).ThenBy(e => e.MaxGeschwindigkeit);
+
+		//4
+		fahrzeuge.Where(e => e.Sitze.Any(x => x.IstBesetzt));
+
+		//5
+		double avg = fahrzeuge.Average(x => x.MaxGeschwindigkeit);
+		fahrzeuge.Where(e => e.MaxGeschwindigkeit > avg);
+
+		//6
+		fahrzeuge.Where(e => e.Sitze.Count(x => x.IstBesetzt) > e.Sitze.Count / 2);
+
+		//7
+		fahrzeuge.GroupBy(e => e.Marke).ToDictionary(e => e.Key, e => e.MaxBy(x => x.MaxGeschwindigkeit));
+
+		//8
+		fahrzeuge.GroupBy(e => e.Sitze.Count).ToDictionary(e => e.Key, e => e.MaxBy(x => x.MaxGeschwindigkeit)).OrderBy(e => e.Key);
+
+		//9
+		fahrzeuge.OrderBy(e => Random.Shared.Next());
 	}
 }
-
 public class Fahrzeug
 {
 	public int MaxGeschwindigkeit;

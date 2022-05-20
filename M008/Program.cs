@@ -14,6 +14,8 @@ public class Lebewesen //Basisklasse für alle Lebewesen
 {
 	public string Name { get; set; }
 
+	public Lebewesen() { }
+
 	public Lebewesen(string name)
 	{
 		Name = name;
@@ -23,8 +25,6 @@ public class Lebewesen //Basisklasse für alle Lebewesen
 	{
 
 	}
-
-	public Lebewesen() { }
 
 	public virtual void WasBinIch()
 	{

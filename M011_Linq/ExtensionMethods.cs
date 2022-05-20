@@ -6,4 +6,9 @@ public static class ExtensionMethods //Klasse muss statisch sein
 	{
 		return zahl.ToString().ToCharArray().Sum(e => (int) char.GetNumericValue(e));
 	}
+
+	public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> list)
+	{
+		return list.OrderBy(e => Random.Shared.Next());
+	}
 }

@@ -2,7 +2,7 @@
 
 public class Program
 {
-	static void Main(string[] args)
+	static void Main2(string[] args)
 	{
 		#region Einfaches Linq
 		//Erstellt eine Liste von Start mit einer bestimmten Anzahl Elementen
@@ -96,7 +96,7 @@ public class Program
 		//Liste aufteilen auf 5er Teile + Rest
 		List<Fahrzeug[]> x = fahrzeuge.Chunk(5).ToList();
 
-		//fahrzeuge = fahrzeuge.Concat() Zwei Collections verbinden
+		//fahrzeuge = fahrzeuge.Concat(...) Zwei Collections verbinden
 		//fahrzeuge.Append() und fahrzeuge.Prepend() -> Objekte am Ende/Anfang hinzufügen
 		#endregion
 
@@ -117,7 +117,16 @@ public class Program
 		Console.WriteLine(fahrzeuge.Aggregate("", (agg, fzg) => agg + $"Das Fahrzeug hat die Marke {fzg.Marke} und kann maximal {fzg.MaxGeschwindigkeit} fahren.\n"));
 		#endregion
 
+		#region Erweiterungsmethoden
+		int zahl = 38527;
+		zahl.Quersumme();
+
 		Console.WriteLine(385618.Quersumme()); //Erweiterungsmethode benutzen
+
+		fahrzeuge = fahrzeuge.Shuffle().ToList(); //Zuweisen wie immer
+
+		groupDictionary.Shuffle(); //Dictionary hat die Methode auch bekommen
+		#endregion
 	}
 }
 
