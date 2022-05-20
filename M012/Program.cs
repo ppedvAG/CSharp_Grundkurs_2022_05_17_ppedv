@@ -36,6 +36,10 @@
 			}
 			throw; //Programmabsturz verursachen (wenn Fataler Fehler)
 		}
+		//catch //(Exception e)
+		//{
+
+		//}
 		finally //Wird immer ausgeführt, auch wenn keine Exception auftritt
 		{
 			Console.WriteLine("Finally ausgeführt");
