@@ -397,3 +397,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 M011_Linq/LabCode.cs
+M011_Linq\LabCode.cs
