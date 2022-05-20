@@ -24,6 +24,8 @@ public class Program
 			Console.WriteLine(s);
 		}
 
+		staedte.ForEach(s => Console.WriteLine(s)); //Funktion auf gesamte Liste anwenden
+
 		Stack<string> staedteStack = new(); //Target-Typed-new: Typ beim new von der Variable entnehmen
 		staedteStack.Push("Hamburg");
 		staedteStack.Push("Wien");
