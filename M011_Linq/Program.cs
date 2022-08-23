@@ -2,7 +2,7 @@
 
 public class Program
 {
-	static void Main2(string[] args)
+	static void Main(string[] args)
 	{
 		#region Einfaches Linq
 		//Erstellt eine Liste von Start mit einer bestimmten Anzahl Elementen
@@ -112,7 +112,6 @@ public class Program
 
 		//Group zu Dictionary konvertieren (var schreiben -> Strg + . -> Langer Typ generieren)
 		Dictionary<FahrzeugMarke, List<Fahrzeug>> groupDictionary = groupedFahrzeuge.ToDictionary(group => group.Key, fzg => fzg.ToList());
-
 		//Liste schnell ausgeben
 		Console.WriteLine(fahrzeuge.Aggregate("", (agg, fzg) => agg + $"Das Fahrzeug hat die Marke {fzg.Marke} und kann maximal {fzg.MaxGeschwindigkeit} fahren.\n"));
 		#endregion
